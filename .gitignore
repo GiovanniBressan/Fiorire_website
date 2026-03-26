@@ -1,0 +1,6 @@
+dist/
+node_modules/
+
+# notes - importante ! Não manda para commit, anotações proprias do projeto
+
+notes.md

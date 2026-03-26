@@ -1,0 +1,167 @@
+.menu {
+  padding: 120px 0;
+  background: var(--cream);
+  position: relative;
+}
+
+.coffe-cup {
+  display: flex;
+  justify-content: center;
+  max-width: 30%;
+  height: auto;
+}
+
+.menu__header {
+  text-align: center;
+  margin-bottom: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.menu__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  color: var(--espresso);
+}
+
+.menu__subtitle {
+  font-size: 1rem;
+  color: var(--stone);
+  max-width: 480px;
+  text-align: center;
+}
+
+/* Tabs */
+.menu__tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 56px;
+  flex-wrap: wrap;
+}
+
+.menu__tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--parchment);
+  background: transparent;
+  color: var(--mocha);
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  transition: var(--transition);
+}
+
+.menu__tab:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+.menu__tab--active {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: white;
+  box-shadow: 0 4px 16px rgba(255, 86, 134, 0.3);
+}
+
+/* Grid */
+.menu__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Card */
+.menu__card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  border: 1px solid rgba(160, 98, 42, 0.08);
+  position: relative;
+  transition: var(--transition);
+  animation: fadeUp 0.5s both;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu__card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(255, 86, 134, 0.12);
+}
+
+.menu__card-tag {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(255, 86, 134, 0.12);
+  color: var(--brand);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.menu__card-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.menu__card-name {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--espresso);
+  line-height: 1.3;
+}
+
+.menu__card-desc {
+  font-size: 0.88rem;
+  color: var(--stone);
+  line-height: 1.7;
+  flex: 1;
+}
+
+.menu__card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  border-top: 1px solid var(--parchment);
+  margin-top: auto;
+}
+
+.menu__card-price {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--caramel);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .menu__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .menu__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu__tab {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
+}

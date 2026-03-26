@@ -1,0 +1,247 @@
+.spaces {
+  padding: 120px 0;
+  background: var(--warm-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.spaces__bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display);
+  font-size: clamp(80px, 15vw, 200px);
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(160, 98, 42, 0.06);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: 0.1em;
+}
+
+.spaces__header {
+  text-align: center;
+  margin-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.spaces__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  color: var(--espresso);
+  max-width: 600px;
+  text-align: center;
+}
+
+.spaces__subtitle {
+  font-size: 1rem;
+  color: var(--stone);
+  max-width: 500px;
+  text-align: center;
+}
+
+/* Grid */
+.spaces__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Space Card */
+.space-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  border: 1px solid rgba(160, 98, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.space-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: var(--transition);
+}
+
+.space-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.space-card:hover::before {
+  transform: scaleX(1);
+}
+
+.space-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.space-card__icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.space-card__icon {
+  font-size: 1.5rem;
+}
+
+.space-card__capacity {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--stone);
+  background: var(--warm-white);
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+}
+
+.space-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.space-card__subtitle {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.space-card__name {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--espresso);
+  line-height: 1.2;
+}
+
+.space-card__desc {
+  font-size: 0.9rem;
+  color: var(--stone);
+  line-height: 1.7;
+}
+
+.space-card__features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.space-card__feature {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: var(--mocha);
+  background: var(--warm-white);
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--parchment);
+}
+
+.space-card__feature-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.space-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  transition: var(--transition);
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--parchment);
+}
+
+.space-card__cta:hover {
+  gap: 12px;
+}
+
+/* Banner */
+.spaces__banner {
+  background: linear-gradient(135deg, var(--espresso) 0%, var(--mocha) 100%);
+  border-radius: var(--radius-lg);
+  padding: 40px 48px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.spaces__banner-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.spaces__banner-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.spaces__banner-text strong {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--cream);
+}
+
+.spaces__banner-text span {
+  font-size: 0.9rem;
+  color: rgba(250, 246, 240, 0.65);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .spaces__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .spaces__banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 32px 24px;
+  }
+}
