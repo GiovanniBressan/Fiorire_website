@@ -1,6 +1,19 @@
+# Disc and Files
+
 dist/
 node_modules/
 
-# notes - importante ! Não manda para commit, anotações proprias do projeto
 
+# notes - importante ! Não manda para commit, anotações proprias do projeto
+# Supabase
 notes.md
+NEADME-resend.md
+
+config.toml
+.branches
+.temp
+
+# dotenvx and .env keys
+.env.keys
+.env.local
+.env.*.local
