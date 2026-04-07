@@ -169,8 +169,8 @@ const Spaces = () => {
           <div className="spaces__banner-text">
             <strong>Precisa de algo especial?</strong>
             <span>
-              Podemos adaptar os espaços para o seu evento. Entre em contato e
-              vamos criar algo único juntos.
+              Adaptamos o espaço para o seu evento. Entre em contato e vamos
+              criar algo único juntos.
             </span>
           </div>
           <a href="#agendamento" className="btn btn--primary">

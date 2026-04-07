@@ -4,6 +4,20 @@
   position: relative;
 }
 
+.testeCss {
+  top: 0;
+  right: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.imgFood {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  height: auto;
+}
+
 .coffe-cup {
   display: flex;
   justify-content: center;
@@ -79,7 +93,6 @@
 
 /* Card */
 .menu__card {
-  background: white;
   border-radius: var(--radius-lg);
   padding: 28px;
   border: 1px solid rgba(160, 98, 42, 0.08);

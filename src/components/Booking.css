@@ -1,3 +1,4 @@
+/* ── Layout ──────────────────────────────────────────────────── */
 .booking {
   padding: 120px 0;
   background: var(--cream);
@@ -5,12 +6,20 @@
 }
 
 .booking::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background: 
-    radial-gradient(ellipse 600px 400px at 0% 50%, rgba(255,86,134,0.05) 0%, transparent 70%),
-    radial-gradient(ellipse 400px 400px at 100% 80%, rgba(160,98,42,0.06) 0%, transparent 70%);
+  background:
+    radial-gradient(
+      ellipse 600px 400px at 0% 50%,
+      rgba(255, 86, 134, 0.05) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 400px 400px at 100% 80%,
+      rgba(160, 98, 42, 0.06) 0%,
+      transparent 70%
+    );
   pointer-events: none;
 }
 
@@ -23,7 +32,7 @@
   z-index: 1;
 }
 
-/* Info Panel */
+/* ── Painel informativo ──────────────────────────────────────── */
 .booking__info {
   display: flex;
   flex-direction: column;
@@ -116,7 +125,7 @@
   color: var(--espresso);
 }
 
-/* Form Wrap */
+/* ── Card do formulário ──────────────────────────────────────── */
 .booking__form-wrap {
   background: white;
   border-radius: var(--radius-lg);
@@ -135,7 +144,7 @@
   border-bottom: 1px solid var(--parchment);
 }
 
-/* Fields */
+/* ── Campos ──────────────────────────────────────────────────── */
 .booking__form {
   display: flex;
   flex-direction: column;
@@ -162,6 +171,12 @@
   color: var(--mocha);
 }
 
+.field__hint {
+  font-size: 0.75rem;
+  color: var(--stone);
+  margin-top: -4px;
+}
+
 .field__input {
   width: 100%;
   padding: 12px 16px;
@@ -173,7 +188,9 @@
   font-size: 0.95rem;
   transition: var(--transition);
   outline: none;
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; - Have a error here, if something don't work Css file,
+  check if this part is the problem.
+  */
 }
 
 .field__input:focus {
@@ -200,33 +217,7 @@
   min-height: 96px;
 }
 
-/* Toggle */
-.field__toggle {
-  display: flex;
-  gap: 8px;
-}
-
-.field__toggle-btn {
-  flex: 1;
-  padding: 10px 16px;
-  border-radius: var(--radius-md);
-  border: 1.5px solid var(--parchment);
-  background: var(--warm-white);
-  color: var(--stone);
-  font-size: 0.85rem;
-  font-weight: 400;
-  transition: var(--transition);
-  cursor: pointer;
-}
-
-.field__toggle-btn.active {
-  border-color: var(--brand);
-  background: rgba(255, 86, 134, 0.06);
-  color: var(--brand);
-  font-weight: 500;
-}
-
-/* Submit */
+/* ── Botão de envio ──────────────────────────────────────────── */
 .booking__submit {
   width: 100%;
   padding: 16px;
@@ -246,6 +237,7 @@
   gap: 8px;
   box-shadow: 0 6px 24px rgba(255, 86, 134, 0.35);
   margin-top: 8px;
+  border: none;
 }
 
 .booking__submit:hover:not(:disabled) {
@@ -262,14 +254,16 @@
 .booking__spinner {
   width: 16px;
   height: 16px;
-  border: 2px solid rgba(255,255,255,0.3);
+  border: 2px solid rgba(255, 255, 255, 0.3);
   border-top-color: white;
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .booking__privacy {
@@ -278,6 +272,7 @@
   color: var(--stone);
 }
 
+/* ── Erro ────────────────────────────────────────────────────── */
 .booking__error {
   background: rgba(220, 60, 60, 0.08);
   border: 1px solid rgba(220, 60, 60, 0.2);
@@ -287,14 +282,14 @@
   color: #c0392b;
 }
 
-/* Success */
+/* ── Tela de sucesso com QR Code ─────────────────────────────── */
 .booking__success {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
   text-align: center;
-  padding: 40px 0;
+  padding: 32px 0;
 }
 
 .booking__success-icon {
@@ -323,7 +318,69 @@
   max-width: 380px;
 }
 
-/* Responsive */
+/* QR Code */
+.booking__qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background: var(--warm-white);
+  border: 1px solid var(--parchment);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.booking__qr-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+
+.booking__qr-img {
+  width: 200px;
+  height: 200px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+}
+
+.booking__qr-id {
+  font-family: "Courier New", monospace;
+  font-size: 0.78rem;
+  color: var(--caramel);
+  letter-spacing: 0.08em;
+  background: var(--parchment);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+}
+
+.booking__qr-hint {
+  font-size: 0.82rem;
+  color: var(--stone);
+  text-align: center;
+  max-width: 260px;
+}
+
+.booking__qr-download {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--brand);
+  text-decoration: none;
+  padding: 8px 20px;
+  border: 1.5px solid var(--brand);
+  border-radius: var(--radius-pill);
+  transition: var(--transition);
+}
+
+.booking__qr-download:hover {
+  background: var(--brand);
+  color: white;
+}
+
+/* ── Responsivo ──────────────────────────────────────────────── */
 @media (max-width: 900px) {
   .booking__inner {
     grid-template-columns: 1fr;
