@@ -174,7 +174,7 @@ const Spaces = () => {
             </span>
           </div>
           <a href="#agendamento" className="btn btn--primary">
-            Falar Conosco
+            Fale Conosco
           </a>
         </div>
       </div>
