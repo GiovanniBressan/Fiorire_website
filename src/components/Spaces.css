@@ -100,6 +100,15 @@
   justify-content: space-between;
 }
 
+.space_style {
+  border-radius: var(--radius-lg);
+}
+
+.img_style {
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
 .space-card__icon-wrap {
   width: 52px;
   height: 52px;
