@@ -5,7 +5,7 @@ import lounge from "../assets/img/Lounge Fiorire.png";
 import barista from "../assets/img/Mesa do Barista.png";
 
 interface Space {
-  img: [string];
+  img: string;
   id: number;
   name: string;
   subtitle: string;
