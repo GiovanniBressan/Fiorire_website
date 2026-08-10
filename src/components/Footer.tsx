@@ -113,7 +113,7 @@ const Footer = () => {
                     strokeWidth="2"
                   />
                 </svg>
-                (41) 99999-9999
+                (41) 9 9762-4667
               </li>
               <li>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
@@ -195,7 +195,7 @@ const Footer = () => {
           <p className="footer__copy">
             © {currentYear} Fiorire Caffetteria · Todos os direitos reservados
           </p>
-          <p className="footer__made">Feito com ㅤ♡ e muito carinho</p>
+          <p className="footer__made">Dev by Giovanni Bressan</p>
         </div>
       </div>
     </footer>

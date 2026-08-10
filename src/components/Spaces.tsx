@@ -1,6 +1,11 @@
 import "./Spaces.css";
+import jardim from "../assets/img/Varanda Jardim.png";
+import espresso from "../assets/img/Sala Espresso.png";
+import lounge from "../assets/img/Lounge Fiorire.png";
+import barista from "../assets/img/Mesa do Barista.png";
 
 interface Space {
+  img: string;
   id: number;
   name: string;
   subtitle: string;
@@ -12,6 +17,7 @@ interface Space {
 
 const spaces: Space[] = [
   {
+    img: jardim,
     id: 1,
     name: "Varanda Jardim",
     subtitle: "Para momentos ao ar livre",
@@ -27,6 +33,7 @@ const spaces: Space[] = [
     accent: "#FF5686",
   },
   {
+    img: espresso,
     id: 2,
     name: "Sala Espresso",
     subtitle: "Para reuniões executivas",
@@ -42,6 +49,7 @@ const spaces: Space[] = [
     accent: "#FF5686",
   },
   {
+    img: lounge,
     id: 3,
     name: "Lounge Fiorire",
     subtitle: "Para grupos e workshops",
@@ -57,6 +65,7 @@ const spaces: Space[] = [
     accent: "#FF5686",
   },
   {
+    img: barista,
     id: 4,
     name: "Mesa do Barista",
     subtitle: "Experiência interativa de café",
@@ -133,6 +142,10 @@ const Spaces = () => {
               </div>
 
               <div className="space-card__body">
+                <div className="img_style">
+                  <img src={space.img} alt="" className="space_style" />
+                </div>
+
                 <p className="space-card__subtitle">{space.subtitle}</p>
                 <h3 className="space-card__name">{space.name}</h3>
                 <p className="space-card__desc">{space.desc}</p>
@@ -174,7 +187,7 @@ const Spaces = () => {
             </span>
           </div>
           <a href="#agendamento" className="btn btn--primary">
-            Falar Conosco
+            Fale Conosco
           </a>
         </div>
       </div>

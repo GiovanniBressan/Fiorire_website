@@ -69,12 +69,7 @@
   font-size: 0.85rem;
   font-weight: 400;
   letter-spacing: 0.04em;
-  transition: var(--transition);
-}
-
-.menu__tab:hover {
-  border-color: var(--brand);
-  color: var(--brand);
+  transition: all 0.2s ease;
 }
 
 .menu__tab--active {
@@ -82,6 +77,25 @@
   border-color: var(--brand);
   color: white;
   box-shadow: 0 4px 16px rgba(255, 86, 134, 0.3);
+  transform: translateY(-2px);
+  animation: fadeInUp 0.25s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu__tab:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(233, 0, 66, 0.12);
 }
 
 /* Grid */
@@ -89,6 +103,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+  transition: all 0.25s ease;
 }
 
 /* Card */
@@ -97,8 +112,8 @@
   padding: 28px;
   border: 1px solid rgba(160, 98, 42, 0.08);
   position: relative;
-  transition: var(--transition);
-  animation: fadeUp 0.5s both;
+  transform: translateY(-2px);
+  animation: fadeInUp 0.5s ease;
   cursor: default;
   display: flex;
   flex-direction: column;
