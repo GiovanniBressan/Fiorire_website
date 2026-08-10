@@ -2,7 +2,8 @@
 
 dist/
 node_modules/
-
+supabase/
+send-booking-email/
 
 # notes - importante ! Não manda para commit, anotações proprias do projeto
 # Supabase
@@ -17,3 +18,4 @@ config.toml
 .env.keys
 .env.local
 .env.*.local
+
